@@ -390,7 +390,98 @@
                 </div>
                 <!-- end #footer -->
             </div>
+             <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $(window).on("resize", function() {
+
+                        var fh = $('#footer').outerHeight();
+
+                        $("#content-wrapper").css({
+                            marginBottom: fh + 'px'
+                        });
+
+                    }).resize();
+                });
+            </script>
             <link type="text/css" rel="stylesheet" media="screen" href="https://cdnsm4-ss16.sharpschool.com/common/resources/DesignPortfolio/SiteThemes/CommonLib/skeletons/sharpschool-skeleton.css"/>
+            <script src="https://cdnsm4-ss16.sharpschool.com/common/resources/DesignPortfolio/SiteThemes/CommonLib/scripts/jquery.bxslider.js" type="text/javascript"></script>
+            <script src="https://cdnsm4-ss16.sharpschool.com/common/resources/DesignPortfolio/SiteThemes/CommonLib/scripts/breadcrumb-slash.js" type="text/javascript"></script>
+            <script src="https://cdnsm4-ss16.sharpschool.com/common/resources/DesignPortfolio/SiteThemes/CommonLib/scripts/replace-cal-arrows.js" type="text/javascript"></script>
+            <script src="https://cdnsm4-ss16.sharpschool.com/common/resources/DesignPortfolio/SiteThemes/CommonLib/scripts/magic-line.js" type="text/javascript"></script>
+            <script src="https://cdnsm4-ss16.sharpschool.com/common/resources/DesignPortfolio/SiteThemes/CommonLib/scripts/fittext.js" type="text/javascript"></script>
+            <script src="https://cdnsm4-ss16.sharpschool.com/common/resources/DesignPortfolio/SiteThemes/CommonLib/scripts/hide-fax.js" type="text/javascript"></script>
+            <!-- School Name Tuning additional info https://github.com/davatron5000/FitText.js -->
+            <script>
+                $(document).ready(function() {
+                    $("#school-name h1 a").fitText(0.2, {
+                        minFontSize: '25px',
+                        maxFontSize: '32px'
+                    });
+
+                });
+            </script>
+            <script type="text/javascript">
+                //<![CDATA[
+                var Page_Validators = new Array(document.getElementById("ctl00_ContentPlaceHolder1_rfvUsername"),document.getElementById("ctl00_ContentPlaceHolder1_rfvPassword"));
+                //]]>
+            </script>
+            <script type="text/javascript">
+                //<![CDATA[
+                var ctl00_ContentPlaceHolder1_rfvUsername = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvUsername"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvUsername");
+                ctl00_ContentPlaceHolder1_rfvUsername.controltovalidate = "ctl00_ContentPlaceHolder1_txtUsername";
+                ctl00_ContentPlaceHolder1_rfvUsername.errormessage = "* Required";
+                ctl00_ContentPlaceHolder1_rfvUsername.display = "Dynamic";
+                ctl00_ContentPlaceHolder1_rfvUsername.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+                ctl00_ContentPlaceHolder1_rfvUsername.initialvalue = "";
+                var ctl00_ContentPlaceHolder1_rfvPassword = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvPassword"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvPassword");
+                ctl00_ContentPlaceHolder1_rfvPassword.controltovalidate = "ctl00_ContentPlaceHolder1_txtPassword";
+                ctl00_ContentPlaceHolder1_rfvPassword.errormessage = "* Required";
+                ctl00_ContentPlaceHolder1_rfvPassword.display = "Dynamic";
+                ctl00_ContentPlaceHolder1_rfvPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+                ctl00_ContentPlaceHolder1_rfvPassword.initialvalue = "";
+                //]]>
+            </script>
+            <script language="javascript">
+                var control = document.getElementById("ctl00_ContentPlaceHolder1_txtUsername");
+                if (control != null) {
+                    control.focus();
+                }
+            </script>
+            <script type="text/javascript">
+                //<![CDATA[
+                window.__TsmHiddenField = $get('ctl00_ScriptManager1_TSM');
+                var Page_ValidationActive = false;
+                if (typeof (ValidatorOnLoad) == "function") {
+                    ValidatorOnLoad();
+                }
+
+                function ValidatorOnSubmit() {
+                    if (Page_ValidationActive) {
+                        return ValidatorCommonOnSubmit();
+                    } else {
+                        return true;
+                    }
+                }
+
+                document.getElementById('ctl00_ContentPlaceHolder1_rfvUsername').dispose = function() {
+                    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvUsername'));
+                }
+
+                document.getElementById('ctl00_ContentPlaceHolder1_rfvPassword').dispose = function() {
+                    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvPassword'));
+                }
+                Sys.Application.add_init(function() {
+                    $create(Sys.Extended.UI.ModalPopupBehavior, {
+                        "CancelControlID": "ctl00_ContentPlaceHolder1_ibCancel",
+                        "DropShadow": true,
+                        "PopupControlID": "ctl00_ContentPlaceHolder1_pnlGoogleApps",
+                        "dynamicServicePath": "/gateway/Login.aspx",
+                        "id": "ctl00_ContentPlaceHolder1_mpeGoogleApps"
+                    }, null, null, $get("ctl00_ContentPlaceHolder1_lblPupopTitle"));
+                });
+                //]]>
+            </script>
         </form>
     </body>
 </html>
